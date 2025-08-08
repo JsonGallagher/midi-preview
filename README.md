@@ -1,10 +1,11 @@
-## JSON.wav — MIDI Previewer
+# JSON.wav — MIDI Previewer
 
 ![App preview](screenshots/app_preview-v1.png)
 
 Lightweight, single‑file MIDI previewer with a built‑in WebAudio synth, WebMIDI output, retro Windows UI, and smooth scrubbing. Open locally, drop a `.mid`, and hit Play.
 
 ### Highlights
+
 - Built‑in synth (WebAudio) with simple GM‑style tones; channel 10 drums
 - Optional output to external MIDI devices (WebMIDI)
 - Scrub by dragging the piano roll or the progress bar
@@ -15,6 +16,7 @@ Lightweight, single‑file MIDI previewer with a built‑in WebAudio synth, WebM
 - Incremental scheduling for reliable playback of long/complex files
 
 ### Quick start
+
 1. Clone or download this repo.
 2. Open `index.html` in a modern browser.
    - For WebMIDI access (external device output), use a local HTTP server (secure contexts are required in most browsers):
@@ -22,6 +24,7 @@ Lightweight, single‑file MIDI previewer with a built‑in WebAudio synth, WebM
      - Node: `npx serve` (or any static server)
 
 ### Using the app
+
 - Drag & drop `.mid` files or use the file picker.
 - Click an item in the list to select it.
 - Transport: Play, Stop; time and progress are shown on the right.
@@ -37,21 +40,25 @@ Lightweight, single‑file MIDI previewer with a built‑in WebAudio synth, WebM
   - Program label (from program change at t=0 if present)
 
 ### Browser support
+
 - Recommended: Chrome / Edge (best WebMIDI + WebAudio behavior)
 - Firefox: Built‑in synth works; WebMIDI requires extensions or flags
 - Safari: Built‑in synth works; WebMIDI availability varies by version/flags
 
 ### Shortcuts
+
 - Space: Play / Stop
 - L: Toggle Loop
 
 ### Known limitations (current)
+
 - Minimal synth: simple waveforms and basic drum approximations
 - No real‑time handling for most MIDI CCs (volume/expression/pan/sustain, etc.)
 - Pitch bend/aftertouch not rendered by the built‑in synth
 - Format 1 files are merged for playback; complex multi‑track semantics beyond note/program are simplified
 
 ### Troubleshooting
+
 - No sound when pressing Play
   - Click the page once to unlock audio, check master Volume
   - Ensure an item is selected in the list
@@ -64,6 +71,7 @@ Lightweight, single‑file MIDI previewer with a built‑in WebAudio synth, WebM
   - Check per‑channel Mute/Solo. Selecting a new file resets Solo/Mute for channels not present in that file.
 
 ### Development
+
 - Single page app: all logic lives in `index.html` (HTML/CSS/JS)
 - No build step required
 - Handy servers for local testing:
@@ -71,6 +79,7 @@ Lightweight, single‑file MIDI previewer with a built‑in WebAudio synth, WebM
   - `npx serve`
 
 ### Roadmap (nice‑to‑have)
+
 - Zoomable piano roll with bar/beat ruler and snap‑to‑bars seek
 - Per‑track view for Format 1, track mute/solo
 - Export audio (OfflineAudioContext) and shareable state links
