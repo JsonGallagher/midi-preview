@@ -1,5 +1,7 @@
 ## JSON.wav — MIDI Previewer
 
+![App preview](screenshots/app_preview-v1.png)
+
 Lightweight, single‑file MIDI previewer with a built‑in WebAudio synth, WebMIDI output, retro Windows UI, and smooth scrubbing. Open locally, drop a `.mid`, and hit Play.
 
 ### Highlights
